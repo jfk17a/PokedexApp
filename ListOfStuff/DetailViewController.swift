@@ -11,6 +11,8 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var UIYear: UILabel!
+    
 
 
     func configureView() {
@@ -18,6 +20,10 @@ class DetailViewController: UIViewController {
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
                 label.text = detail.into
+            }
+            
+            if let yearlabel = UIYear {
+                yearlabel.text = "\(detail.year)"
             }
             
             self.title = detail.title
